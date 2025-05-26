@@ -1,0 +1,32 @@
+<!-- templates/contrato_template.html -->
+<html>
+  <head><meta charset="utf-8"><title>Contrato</title></head>
+  <body>
+    <h1>Contrato de Prestação de Serviço</h1>
+    <p><strong>Cliente:</strong> {{ nome_Cliente }}</p>
+    <p><strong>CPF:</strong> {{ cpf_Cliente }}</p>
+    <p><strong>Prestador:</strong> {{ nome_Prestador }}</p>
+    <p><strong>CPF:</strong> {{ cpf_Prestador }}</p>
+    <p><strong>Serviço:</strong> {{ servico }}</p>
+    <p><strong>Prazo:</strong> {{ prazo_entrega }}</p>
+    <p><strong>Valor:</strong> R$ {{ "%.2f"|format(valor|float) | replace(".", ",") }}</p>
+  </body>
+
+  <body>
+  <hr>
+
+    <p>
+    Contrato referente ao serviço de <strong>{{ servico }}</strong>, a ser prestado por <strong>{{ nome_Prestador }}</strong>
+    cujo o CPF nº <strong>{{ cpf_Prestador }}</strong> referente ao serviço do(a) <strong>{{ nome_Cliente }} </strong>, pelo valor de <strong>R$ {{ "%.2f"|format(valor|float) | replace(".", ",") }}</strong> e
+    prazo de entrega de <strong>{{ prazo_entrega }}</strong>.
+    </p>
+
+    <br><br>
+    <p>__________________________________________</p>
+    <p><strong>Assinatura do Contratante</strong></p>
+
+    <p>__________________________________________</p>
+    <p><strong>Assinatura do Contratado</strong></p>
+
+  </body>
+</html>
